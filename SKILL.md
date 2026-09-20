@@ -31,6 +31,12 @@ art publish ./plan-site --title "Q3 plan" --project "Personal" --tag plan --tag 
 
 Always pass `--project` and 1–3 `--tag`s. Republish from the **same directory** to keep the URL. New directory = new link. Then `curl -s -o /dev/null -w '%{http_code}\n' https://byagent.dev/a/<id>/` and hand the user `url`.
 
+## MCP (agent-fetchable library)
+
+For list/get/comments from Claude Code, Cursor, or Codex without shelling the CLI, use the stdio MCP server `byagent-mcp` from private app repo [`anup-a/artifacts`](https://github.com/anup-a/artifacts) (`cmd/byagent-mcp`). Full install: [MCP.md](MCP.md).
+
+P0 tools: `artifact_list`, `artifact_get`, `artifact_comments`, `artifact_reply`, `artifact_resolve`. Auth: same `ARTIFACTS_TOKEN` / keys page as the CLI. **No fake search** — filter with `project` / `end_user` on list. Publish stays on `art publish` until MCP publish ships.
+
 ## Design
 
 Claude-artifact bar: one self-contained `index.html`, CSS/JS inlined, real content (never lorem), a 4–6 colour palette taken from **this** subject, a display face + a body face, both light and dark (`prefers-color-scheme`), readable on first paint (no scroll-triggered reveals). Relative asset paths only — a leading `/` 404s under `/a/<id>/`. Prose as real text nodes so comments can attach. No commenting UI of your own.

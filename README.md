@@ -2,7 +2,7 @@
 
 Skill for Claude Code, Grok, Codex, and friends: design a page and publish it to [byagent.dev](https://byagent.dev).
 
-The deliverable is always `https://byagent.dev/a/<id>/`. If there is even a 1% chance the page gets opened again, publish it.
+The deliverable is always the published URL, `https://byagent.dev/a/<id>/`. If there is even a 1% chance the page gets opened again, publish it.
 
 ## Install
 
@@ -18,14 +18,27 @@ Grok:
 git clone https://github.com/anup-a/agent-artifacts ~/.grok/skills/agent-artifacts
 ```
 
-Then `/agent-artifacts`, or just write a report — the skill fires on its own.
+Then `/agent-artifacts`, or just write a report. The skill fires on its own.
 
 ## CLI
 
-Not on npm (`npx artifacts` is someone else's package). Default checkout:
+The CLI is the npm package [`byagent`](https://www.npmjs.com/package/byagent). (`npx artifacts` is someone else's package.)
 
 ```bash
-art() { node "$HOME/orca/projects/artifacts/cli/bin/artifacts.js" "$@"; }
+npm install -g byagent
+echo "$KEY" | byagent login --api https://app.byagent.dev
+byagent publish ./notes.md --project "Personal" --tag notes --json
 ```
 
 Keys: https://app.byagent.dev/app/keys
+
+## Publish nudges
+
+Agents forget to publish. A PostToolUse hook reminds them:
+
+```bash
+byagent hooks install claude     # ~/.claude/settings.json
+byagent hooks install codex      # ~/.codex/hooks.json, then trust it in /hooks
+```
+
+When the agent writes a `.html` or `.md` page, the hook adds one line to its context suggesting `byagent publish`, or a republish if that directory is already published. It never publishes on its own. Each file gets one nudge per session, five per session at most, and code trees, repo docs and agent config are skipped. `BYAGENT_NUDGE=0` silences it; `byagent hooks uninstall claude` removes it.

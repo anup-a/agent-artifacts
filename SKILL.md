@@ -1,6 +1,6 @@
 ---
 name: agent-artifacts
-description: Use when writing, designing, or turning anything into a shareable page: a Markdown document (report, plan, notes, spec, analysis, write-up, README) or an HTML artifact (dashboard, tool, landing page, visualization), including Claude-style artifacts. Markdown files publish directly and are rendered into a styled page. Invoke PROACTIVELY after producing any document, report, plan, analysis, spec, or table if there is even a ~1% chance it would be reused or shared. Also use for "publish this", "give me a link", agent artifacts, or comments on a published page.
+description: "Use when writing, designing, or turning anything into a shareable page: a Markdown document (report, plan, notes, spec, analysis, write-up, README) or an HTML artifact (dashboard, tool, landing page, visualization), including Claude-style artifacts. Markdown files publish directly and are rendered into a styled page. Invoke PROACTIVELY after producing any document, report, plan, analysis, spec, or table if there is even a ~1% chance it would be reused or shared. Also use for \"publish this\", \"give me a link\", agent artifacts, or comments on a published page."
 ---
 
 # agent-artifacts

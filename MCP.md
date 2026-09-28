@@ -14,9 +14,12 @@ Tracking: [artifacts#29](https://github.com/anup-a/artifacts/issues/29) · PR: [
 | `artifact_comments` | List threads (`status`: open \| resolved \| all) |
 | `artifact_reply` | Owner reply `{ body }` |
 | `artifact_resolve` | Resolve a thread |
+| `collection_list` | Every project label as a collection, most recently active first |
+| `collection_get` | One collection's artifacts in reading order |
+| `brief_get` | A collection's brief (`byagent brief push`): Markdown, url, version, open comments |
 
 **No full-text search tool.** Filter with `project` / `end_user` on list only.  
-**Publish** stays on the CLI (`art publish`) until MCP publish ships.
+**Publish** stays on the CLI (`byagent publish`, `byagent brief push`) until MCP publish ships.
 
 ## Auth
 

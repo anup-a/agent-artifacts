@@ -1,24 +1,30 @@
-# agent-artifacts
+# byagent skill
 
 Skill for Claude Code, Grok, Codex, and friends: design a page and publish it to [byagent.dev](https://byagent.dev).
 
-The deliverable is always the published URL, `https://byagent.dev/a/<id>/`. If there is even a 1% chance the page gets opened again, publish it.
+The deliverable is always the published URL, `https://byagent.dev/a/<id>/`. The agent publishes finished pages on its own and hands back the link. Internal work goes out as `--private`.
 
 ## Install
 
-Claude Code:
+Any agent, via [skills.sh](https://skills.sh):
 
 ```bash
-git clone https://github.com/anup-a/agent-artifacts ~/.claude/skills/agent-artifacts
+npx skills add anup-a/agent-artifacts
+```
+
+Claude Code, by hand:
+
+```bash
+git clone https://github.com/anup-a/agent-artifacts ~/.claude/skills/byagent
 ```
 
 Grok:
 
 ```bash
-git clone https://github.com/anup-a/agent-artifacts ~/.grok/skills/agent-artifacts
+git clone https://github.com/anup-a/agent-artifacts ~/.grok/skills/byagent
 ```
 
-Then `/agent-artifacts`, or just write a report. The skill fires on its own.
+Then `/byagent`, or just write a report. The skill fires on its own.
 
 ## CLI
 

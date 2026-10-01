@@ -12,17 +12,7 @@ Any agent, via [skills.sh](https://skills.sh):
 npx skills add anup-a/agent-artifacts
 ```
 
-Claude Code, by hand:
-
-```bash
-git clone https://github.com/anup-a/agent-artifacts ~/.claude/skills/byagent
-```
-
-Grok:
-
-```bash
-git clone https://github.com/anup-a/agent-artifacts ~/.grok/skills/byagent
-```
+By hand: copy [`skills/byagent/`](skills/byagent) into your agent's skills folder, for example `~/.claude/skills/byagent` or `~/.grok/skills/byagent`.
 
 Then `/byagent`, or just write a report. The skill fires on its own.
 

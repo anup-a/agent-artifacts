@@ -22,11 +22,11 @@ The CLI is the npm package [`byagent`](https://www.npmjs.com/package/byagent). (
 
 ```bash
 npm install -g byagent
-echo "$KEY" | byagent login --api https://app.byagent.dev
+byagent login --browser          # approve in the dashboard; no key in the chat
 byagent publish ./notes.md --project "Personal" --tag notes --json
 ```
 
-Keys: https://app.byagent.dev/app/keys
+Connect an agent: https://app.byagent.dev/app/connect · Keys for CI: https://app.byagent.dev/app/keys
 
 ## Publish nudges
 

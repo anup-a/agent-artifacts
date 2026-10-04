@@ -23,12 +23,12 @@ Tracking: [artifacts#29](https://github.com/anup-a/artifacts/issues/29) · PR: [
 
 ## Auth
 
-Same keys as the CLI — create one at https://app.byagent.dev/app/keys:
+Same keys as the CLI. Easiest: `byagent login --browser` (or the prompt from https://app.byagent.dev/app/connect) saves one to `~/.artifacts/config.json`. Or create one at https://app.byagent.dev/app/keys:
 
 ```bash
 export ARTIFACTS_API=https://app.byagent.dev
 export ARTIFACTS_TOKEN=…          # or BYAGENT_API_KEY
-# or: byagent login → ~/.artifacts/config.json
+# or: byagent login --browser → ~/.artifacts/config.json
 ```
 
 ## Build

@@ -86,9 +86,13 @@ pages run in a sandbox without viewer commenting; owner comment management still
 works through the dashboard and CLI. Switching to public also exposes retained
 versions. Switching to private cannot revoke already downloaded copies.
 
+To open a private page yourself in a browser that is not signed in to byagent (a
+headless or shared preview), run `byagent share <id> --expires 1d --json` and open
+its one-click link; `byagent share <id> --off` withdraws it.
+
 ## Publish nudges
 
-Hooks are opt-in: only run `byagent hooks install claude` (or `codex`) when the user asks for it. Once installed, a line starting `byagent:` can appear after you write a `.html` or `.md` file. It is a reminder, not a command: publish the page, or republish the directory it names, once the page is finished, following the rules above. Ignore it for files that belong to a codebase.
+Hooks are opt-in: only run `byagent hooks install claude` (or `codex`) when the user asks for it. Once installed, a line starting `byagent:` can appear after you write a `.html` or `.md` file. It is a reminder, not a command: publish the page, or republish the directory it names, at the end of the turn, drafts included, following the rules above. Ignore it for files that belong to a codebase.
 
 ## MCP
 

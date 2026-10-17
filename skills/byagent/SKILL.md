@@ -90,6 +90,12 @@ To open a private page yourself in a browser that is not signed in to byagent (a
 headless or shared preview), run `byagent share <id> --expires 1d --json` and open
 its one-click link; `byagent share <id> --off` withdraws it.
 
+To read a page yourself, private ones included, run `byagent pull <id> [<dir>] --json`.
+It downloads the live version's files exactly as published (`--at <version>` for an
+older one) into an empty directory, `./<id>` by default; a Markdown page comes back as
+its rendered `index.html`. It needs only the key, so use it instead of a share link or
+a browser whenever you need what a page says.
+
 ## Publish nudges
 
 Hooks are opt-in: only run `byagent hooks install claude` (or `codex`) when the user asks for it. Once installed, a line starting `byagent:` can appear after you write a `.html` or `.md` file. It is a reminder, not a command: publish the page, or republish the directory it names, at the end of the turn, drafts included, following the rules above. Ignore it for files that belong to a codebase.

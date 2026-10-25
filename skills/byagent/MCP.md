@@ -17,6 +17,8 @@ Tracking: [artifacts#29](https://github.com/anup-a/artifacts/issues/29) · PR: [
 | `collection_list` | Every project label as a collection, most recently active first |
 | `collection_get` | One collection's artifacts in reading order |
 | `brief_get` | A collection's brief (`byagent brief push`): Markdown, url, version, open comments |
+| `link_add` | File work hosted elsewhere (a deploy, a Claude artifact, a ChatGPT or Grok share link) as a dashboard-only link: `url`, `title`, `project`, `agent` (defaults to the MCP client's name) |
+| `link_list` | Links, newest first (`q`, `project`) |
 
 **No full-text search tool.** Filter with `project` / `end_user` on list only.  
 **Publish** stays on the CLI (`byagent publish`, `byagent brief push`) until MCP publish ships.
